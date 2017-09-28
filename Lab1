@@ -1,0 +1,77 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+void convert (double t, char type)
+{
+    switch (type)
+    {
+        case 'C':
+        case 'c':
+            if (t < -273.15){
+                printf("Temperature < 0");
+                break;
+            }
+            else{
+                double k = t + 273.15;
+                double f = (t * 9 / 5) + 32;
+                printf ("%.2f C:\n", t);
+                printf ("%.2f K:\n",  k);
+                printf ("%.2f F:\n", f);
+                break;
+            }
+
+        case 'K':
+        case 'k':
+            if (temp < 0){
+                printf("Temperature < 0");
+                break;
+            }
+            else {
+                double c = t - 273.15;
+                double f = (t / 5 * 9) - 459.67;
+                printf ("%.2f K: \n", t);
+                printf ("%.2f C: \n",  c);
+                printf ("%.2f F: \n", f);
+            break;
+            }
+
+        case 'F':
+        case 'f':
+            if (t < -459.67) {
+                printf("Temperature < 0");
+                break;
+            }
+            else {
+                double c = (t - 32) * 5 / 9;
+                double k = (t + 459.67) * 5 / 9;
+                printf ("%.2f F: \n", t);
+                printf ("%.2f C: \n",  c);
+                printf ("%.2f K: \n", k);
+                break;
+            }
+
+        default:
+
+                printf("Error");
+
+            break;
+    }
+
+}
+
+int main(int argc, char *argv[])
+{
+	if (argc == 2){
+		double t = atof(argv[1]);
+		convert(t,'C');
+    printf("\n");
+    convert(t,'K');
+    printf("\n");
+    convert(t,'F');
+	}
+    else if(argc == 3) {
+    	double t = atof(argv[1]);
+    	convert(t,*argv[2]);
+    }
+    return 0;
+}
