@@ -1,14 +1,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void convert (double t, char type)
+/* Программа для конвертирования температур по Цельсию,
+    Фаренгейту и Кельвину*/
+
+void convert (double t, char type) /* функция "convert" для вычисления
+					значений температур и выбора нужных */
 {
-    switch (type)
+    switch (type) /* переключатель для C,c,K,k,F,f*/
     {
         case 'C':
         case 'c':
             if (t < -273.15){
-                printf("Temperature < 0");
+                printf("Temperature < abs.0"); /* Если температура ниже абсолютного нуля
+						   для данного измерения - прерываем цикл*/
                 break;
             }
             else{
@@ -23,7 +28,8 @@ void convert (double t, char type)
         case 'K':
         case 'k':
             if (temp < 0){
-                printf("Temperature < 0");
+                printf("Temperature < abs.0"); /* Если температура ниже абсолютного нуля
+						   для данного измерения - прерываем цикл*/
                 break;
             }
             else {
@@ -38,7 +44,8 @@ void convert (double t, char type)
         case 'F':
         case 'f':
             if (t < -459.67) {
-                printf("Temperature < 0");
+                printf("Temperature < abs.0"); /* Если температура ниже абсолютного нуля
+						   для данного измерения - прерываем цикл*/
                 break;
             }
             else {
@@ -59,7 +66,7 @@ void convert (double t, char type)
 
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char *argv[])  /* главная функция */ 
 {
 	if (argc == 2){
 		double t = atof(argv[1]);
