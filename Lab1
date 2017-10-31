@@ -27,7 +27,7 @@ void convert (double t, char type) /* функция "convert" для вычис
 
         case 'K':
         case 'k':
-            if (temp < 0){
+            if (t < 0){
                 printf("Temperature < abs.0"); /* Если температура ниже абсолютного нуля
 						   для данного измерения - прерываем цикл*/
                 break;
