@@ -66,19 +66,19 @@ void convert (double t, char type) /* функция "convert" для вычис
 
 }
 
-int main(int argc, char *argv[])  /* главная функция */ 
+int main(int argc, char *argv[])
 {
-	if (argc == 2){
-		double t = atof(argv[1]);
-		convert(t,'C');
+    if (argc == 2){   /* Если не указан тип градуса, вывести для всех */
+        double temp = atof(argv[1]); 
+        convert(temp,'C');
     printf("\n");
-    convert(t,'K');
+    convert(temp,'K');
     printf("\n");
-    convert(t,'F');
-	}
+    convert(temp,'F');
+    }
     else if(argc == 3) {
-    	double t = atof(argv[1]);
-    	convert(t,*argv[2]);
+        double temp = atof(argv[1]);
+        convert(temp,*argv[2]);
     }
     return 0;
 }
