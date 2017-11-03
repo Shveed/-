@@ -1,19 +1,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* Программа для конвертирования температур по Цельсию,
-    Фаренгейту и Кельвину*/
+/* Program for converting temperatures in Celcium, 
+    Farenheit and Kelvin */
 
-void convert (double t, char type) /* функция "convert" для вычисления
-					значений температур и выбора нужных */
+void convert (double t, char type) /* function "convert" made for counting
+					temperatures and selecting them in the right way */
 {
     switch (type) /* переключатель для C,c,K,k,F,f*/
     {
         case 'C':
         case 'c':
             if (t < -273.15){
-                printf("Temperature < abs.0"); /* Если температура ниже абсолютного нуля
-						   для данного измерения - прерываем цикл*/
+                printf("Temperature < abs.0"); /* If temperature is below abs.zero
+						   for current measure - break the cicle */
                 break;
             }
             else{
@@ -28,8 +28,8 @@ void convert (double t, char type) /* функция "convert" для вычис
         case 'K':
         case 'k':
             if (t < 0){
-                printf("Temperature < abs.0"); /* Если температура ниже абсолютного нуля
-						   для данного измерения - прерываем цикл*/
+                printf("Temperature < abs.0"); /* If temperature is below abs.zero
+						   for current measure - break the cicle*/
                 break;
             }
             else {
@@ -44,8 +44,8 @@ void convert (double t, char type) /* функция "convert" для вычис
         case 'F':
         case 'f':
             if (t < -459.67) {
-                printf("Temperature < abs.0"); /* Если температура ниже абсолютного нуля
-						   для данного измерения - прерываем цикл*/
+                printf("Temperature < abs.0"); /* If temperature is below abs.zero
+						   for current measure - break the cicle*/
                 break;
             }
             else {
@@ -68,7 +68,7 @@ void convert (double t, char type) /* функция "convert" для вычис
 
 int main(int argc, char *argv[])
 {
-    if (argc == 2){   /* Если не указан тип градуса, вывести для всех */
+    if (argc == 2){   /* If temperature type is not specified, output for all 3 types */
         double temp = atof(argv[1]); 
         convert(temp,'C');
     printf("\n");
