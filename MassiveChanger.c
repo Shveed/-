@@ -42,9 +42,9 @@ void main()
         mas[4][i] = mas[4][4-i];
         mas[0][4-i] = curr;
         mas[4][4-i] = curr1;
-
-     printf("Remade array:");
     }
+    printf("Remade array:");
+    printf("\n");
     for (i=0; i<5; i++)
     {
         for (j=0; j<5; j++)
