@@ -18,6 +18,7 @@ void main()
             }
     }
     printf("Starting with...");
+    printf("\n");
     /* Shows entered array */
     for (i=0; i<5; i++)
     {
@@ -95,6 +96,16 @@ void main()
         }
     }
 
+        for (i=0; i<4; i++)
+    {
+        for (j=0; j<4; j++)
+            {
+            printf("%d\t",lol[i][j]);
+            }
+        printf("\n");
+    }
+    printf("\n");
+
     /* New Array Entrance */
     for (i=0; i<4; i++)
     {
@@ -131,6 +142,7 @@ void main()
         {
             lastmas[i][j] = newmas[i][j] * lol[i][j];
         }
+
     }
     printf("\n");
 
