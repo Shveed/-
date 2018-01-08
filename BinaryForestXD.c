@@ -67,7 +67,7 @@ int main(int argc, const char * argv[]) {
     int i;
     int size;
     node_t* root;
-    printf("GIMME the array size\n");
+    printf("Enter the array size\n");
     scanf("%d", &size);
     /* initializing an array with random numbers */
     array = (int*) malloc(size * sizeof(int));
@@ -84,7 +84,7 @@ int main(int argc, const char * argv[]) {
         createtree(root, array[i]);
     /* searching for minimum and maximum */
     printf("Minimum is: %d\n", searchmin(root)->value);
-    printf("MAximum is: %d\n", searchmax(root)->value);
+    printf("Maximum is: %d\n", searchmax(root)->value);
     /* sorting an array */
     sort(root, array);
     /* printing a sorted array */
