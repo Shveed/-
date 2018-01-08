@@ -72,6 +72,7 @@ int main(int argc, const char * argv[]) {
     /* initializing an array with random numbers */
     array = (int*) malloc(size * sizeof(int));
     srand((int)time(NULL));
+    printf("Our array is:\n");
     for (i = 0; i < size; i++)
     {
         array[i] = rand() % MAX_NUMBER;
